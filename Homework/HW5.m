@@ -12,4 +12,10 @@ Tc = inv(Cext);
 
 Atilde = Tc*A*inv(Tc);
 Btilde = Tc*B;
-Ctilde = C*inv(Tc)
+Ctilde = C*inv(Tc);
+
+Oext = [1 1; 0 1];
+Tc2 = inv(Oext);
+Atilde2 = Tc2*A*inv(Tc2)
+Btilde2 = Tc2*B
+Ctilde2 = C*inv(Tc2)
