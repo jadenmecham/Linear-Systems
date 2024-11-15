@@ -19,3 +19,10 @@ Tc2 = inv(Oext);
 Atilde2 = Tc2*A*inv(Tc2)
 Btilde2 = Tc2*B
 Ctilde2 = C*inv(Tc2)
+%% 
+% Problem 5.2
+syms a b c d q1 q2
+AT = [0 -2; 1 -3];
+P = [a b; c d];
+
+
