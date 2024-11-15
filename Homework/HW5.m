@@ -22,7 +22,12 @@ Ctilde2 = C*inv(Tc2)
 %% 
 % Problem 5.2
 syms a b c d q1 q2
+A = [0 1; -2 -3];
 AT = [0 -2; 1 -3];
 P = [a b; c d];
+Q= [q1 0; 0 q2];
+
+eq = AT*P + P*A
+lyap(A,Q)
 
 
