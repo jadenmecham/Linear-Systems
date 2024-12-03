@@ -138,11 +138,11 @@ B = [0;
      0;
      1/L];
  
-C = [1 0 0];
+C = [2 0 0];
 
 D = [0];
 
-% make the state space model
+% make the state space modelm
 sys_ss = ss(A, B, C, D);
 
 % find transfer function
