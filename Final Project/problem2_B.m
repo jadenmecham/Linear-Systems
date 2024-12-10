@@ -30,7 +30,6 @@ C = [0 1 0 0];
 D = 0;
 % Desired closed-loop poles
 desired_poles = [-130, -2, -2.5 + 2j, -2.5 - 2j];
-
 % Compute feedback gain K
 K = place(A, B, desired_poles);
 disp('gain k:');
@@ -56,7 +55,7 @@ x0 = [pi/180; 4*pi/180; 0; 0];
 
 % Plot results
 figure;
-plot(t_open, alpha_open, 'r--', 'LineWidth', 1.5); hold on;
+plot(t_open, alpha_open, 'r-', 'LineWidth', 1.5); hold on;
 plot(t_closed, alpha_closed, 'b-', 'LineWidth', 1.5);
 xlabel('Time (s)');
 ylabel('Pendulum Angle \alpha (rad)');
