@@ -28,6 +28,7 @@ A = [0 0 1 0;
 B = [0;0;B1;B2];
 C = [0 1 0 0];
 D = 0;
+
 % Desired closed-loop poles
 desired_poles = [-130, -2, -2.5 + 2j, -2.5 - 2j];
 % Compute feedback gain K
@@ -44,7 +45,7 @@ sys_closed = ss(A_cl, B, C, D);
 
 
 t = linspace(0, 5, 500);  
-u = ones(size(t));
+u = zeros(size(t));
 x0 = [pi/180; 4*pi/180; 0; 0];  
 
 % Simulate open-loop response
@@ -62,3 +63,4 @@ ylabel('Pendulum Angle \alpha (rad)');
 legend('Open-Loop', 'Closed-Loop');
 title('Pendulum Angle Response (\alpha)');
 grid on;
+
